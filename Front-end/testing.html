@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="thermostat.css">
+    
+</head>
+
+<body>
+
+
+    <!-- example thermostat card/section that user inititally sees on dashboard  -->
+    <div class="container">
+        <div class="card" onclick="showPopup()">
+            <h1>Control</h1>
+            <p>click to expand/control</p>
+        </div>
+    </div>
+
+    <!-- thermostat that pops/expands when clicked on thermostate card -->
+    <div class="expand" id="expand">
+        <div class="content">
+            <button class="close" onclick="hidePopup()">x</button>
+
+            <div class="therm-container">
+                <div class="thermostat">
+                    <svg class="progress" width="200" height="200">
+                        <circle class="ring" cx="100" cy="100" r="80"></circle>
+                        <circle class="circle" cx="100" cy="100" r="80"></circle>
+                    </svg>
+
+                    <div class="display"></div>
+                        <p>Heat</p>
+                        <h1><span id="value">20</span>°F</h1>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button onclick="adjustTemperature(-1)">-</button>
+                <button onclick="adjustTemperature(1)">+</button>
+
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+    <script src="thermostat.js"></script>
+    
+</body>
+</html>
