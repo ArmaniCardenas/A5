@@ -9,13 +9,13 @@ const radius = 80;
 
 const circumference  = 2 * Math.PI * radius;
 
-let current = 20; 
+let current = 21; 
 
 const min = 10;
 const max = 30;
 
-circle.style.strokeDasharray = `${circumference} ${circumference}`;
-circle.style.strokeDashoffset = `${circumference}`;
+progress.style.strokeDasharray = `${circumference} ${circumference}`;
+progress.style.strokeDashoffset = `${circumference}`;
 setProgress(current);
 
 
@@ -35,17 +35,17 @@ function setProgress(temp)
 {
     const percent = (temp - min) / (max - min);
     const offset = circumference - percent * circumference;
-    circle.style.strokeDashoffset = offset;
+    progress.style.strokeDashoffset = offset;
 }
 
 
 function adjust(change)
 {
     current = Math.max(min, Math.min(max, current + change));
-    updtateUI();
+    updateUI();
 }
 
-function updtateUI() {
+function updateUI() {
     value.textContent = current;
     setProgress(current);
 }
@@ -72,9 +72,9 @@ function onDrag(e) {
     const angle = Math.atan2(y, x) * (180 / Math.PI) + 90;
     const normalizedAngle = angle < 0 ? 360 + angle : angle;
     const temp =
-      minTemperature +
-      (normalizedAngle / 360) * (maxTemperature - minTemperature);
-    currentTemperature = Math.round(temp);
+      min +
+      (normalizedAngle / 360) * (max - min);
+    current = Math.round(temp);
     updateUI();
   }
   
