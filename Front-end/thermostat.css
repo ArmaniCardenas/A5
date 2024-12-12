@@ -241,6 +241,14 @@ p {
   margin-top: 20px;
 }
 
+
+.example-image {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  margin: 20px auto;
+}
+
 .increase-decrease {
   display: flex;
   align-items: center;
