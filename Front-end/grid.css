@@ -14,7 +14,6 @@ body {
     background-color: white;
     width: 100vw;
     overflow-x: hidden;
-    overflow-y: hidden;
 
 }
 
@@ -306,4 +305,92 @@ p {
     width: 0;
     height: 0;
     pointer-events: none;
+}
+
+
+form {
+    padding: 5px;
+    width: fit-content;
+    margin: 0 auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+
+}
+
+
+input[type="text"] {
+    border: 0;
+    padding: 10px;
+    border-radius: 10px 0 0 10px;
+    outline: 0;
+
+}
+
+input[type="submit"] {
+    border: 0;
+    padding: 10px;
+    border-radius: 0 10px 10px 0;
+    outline: 0;
+}
+
+#weather-Container {
+ 
+    background:rgb(158, 236, 158);
+    padding: 20px;
+    border-radius:15px;
+    height:150px;
+    width:200px;
+    box-shadow: 0 0 20px 2px #5e5d5da9 ;
+}
+
+
+.container {
+    text-decoration: none;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #3b6c8a;
+    padding: 15px;
+    margin: 40px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
+
+#cityName{
+    top:0;
+    left:0;
+    white-space: nowrap;
+}
+
+#image{
+    top:10px;
+    right:10px;
+    background:#c6ccc1;
+    height: 50px;
+    border-radius: 50%;
+    border: 0.2px dotted black;
+    box-shadow: 0 0 20px 2px #bfd485 ;
+}
+
+#temp{
+    bottom:20px;
+    left:10px;
+}
+
+#main{
+    bottom:40px;
+    right:10px;
+
+}
+
+#description{
+    bottom:5px;
+    right:0px;
+    background:rgba(216, 250, 239, 0.555);
+    border-radius: 0 0 10px 10px;
 }
