@@ -1,3 +1,5 @@
+
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -57,6 +59,11 @@ main {
     padding: 15px;
     height: 400px;
 
+}
+.curractivecolumn {
+    width: 45%;
+    padding: 15px;
+    height: 400px;
 }
 
 .column2 {
