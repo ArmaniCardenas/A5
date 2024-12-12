@@ -34,7 +34,7 @@ const city = document.querySelector("#city");
 const city_Name = document.querySelector("#cityName");
 const temp = document.querySelector("#temp");
 const main = document.querySelector("#main");
-const description = document.querySelector("#discription");
+const description = document.querySelector("#description");
 const img = document.querySelector("#image");
 
 
@@ -56,7 +56,7 @@ weatherUpdate = (city) => {
         
         else {
             var data = JSON.parse(xhr.response);
-            cityName.innerHTML = data.name;
+            city_Name.innerHTML = data.name;
             temp.innerHTML = `${Math.round(data.main.temp - 273.15)}°C`;
             main.innerHTML = data.weather[0].main;
             description.innerHTML = data.weather[0].description;
